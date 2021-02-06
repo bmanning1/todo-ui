@@ -14,7 +14,7 @@ const App = () => {
     const getTodos = async() => {
         try {
             const res = await axios.get(url);
-            if (res.status !== 200) {
+            if (res.status === 200) {
                 setTodos(res.data);
             } else {
                 console.log(`Error code ${res.status}`);
@@ -27,7 +27,7 @@ const App = () => {
     const addTodo = async() => {
         try {
             const res = await axios.post(url, { todo: newTodo });
-            if (res.status !== 200) {
+            if (res.status === 200) {
                 setNewTodo('');
             } else {
                 console.log(`Error code ${res.status}`);
@@ -41,7 +41,7 @@ const App = () => {
         try {
             // for delete method, the body has to be like { data: body }
             const res = await axios.delete(url, { data: { id } });
-            if (res.status !== 200) {
+            if (res.status === 200) {
                 getTodos();
             } else {
                 console.log(`Error code ${res.status}`);
