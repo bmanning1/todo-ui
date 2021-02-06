@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const url = 'http://localhost:8080/todos';
+const url = '/api/todos';
 
 const App = () => {
     const [newTodo, setNewTodo] = useState('');
