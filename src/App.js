@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const url = '/api/todos';
+// use this in development
+// const url = '/todos';
 
 const App = () => {
     const [newTodo, setNewTodo] = useState('');
