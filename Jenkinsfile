@@ -10,7 +10,8 @@ pipeline {
     stage('Cloning git') {
       steps {
         echo 'Cloning repo from git **********'
-        git 'https://github.com/bmanning1/todo-ui.git'
+        // git 'https://github.com/bmanning1/todo-ui.git'
+        sh 'ls'
       }
     }
 
