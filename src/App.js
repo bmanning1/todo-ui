@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const url = '/api/todos';
-// use this in development
-// const url = '/todos';
+const url = process.env.ENV === 'development'
+    ? 'http://localhost:8080/todos'
+    : '/api/todos';
 
 const App = () => {
     const [newTodo, setNewTodo] = useState('');

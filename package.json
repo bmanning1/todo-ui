@@ -4,15 +4,14 @@
   "private": true,
   "dependencies": {
     "axios": "^0.21.1",
-    "express": "^4.17.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "start:server": "node server.js",
+    "start": "ENV=production react-scripts start",
+    "start:local": "ENV=development react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
   },
@@ -33,6 +32,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "http://localhost:8080"
+  }
 }
